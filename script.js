@@ -299,24 +299,78 @@
     statsObserver.observe(el);
   });
 
-  // ----- Formulaire de contact
+  // ----- Formulaire de contact avec envoi d'email
   if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
+    contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
+      
       var btn = this.querySelector('button[type="submit"]');
       var originalText = btn.textContent;
+      var nameInput = this.querySelector('#name');
+      var emailInput = this.querySelector('#email');
+      var messageInput = this.querySelector('#message');
+      
+      // Récupérer les valeurs
+      var name = nameInput.value.trim();
+      var email = emailInput.value.trim();
+      var message = messageInput.value.trim();
+      
+      // Validation côté client
+      if (!name || !email || !message) {
+        alert('Veuillez remplir tous les champs.');
+        return;
+      }
+      
+      // Désactiver le bouton
       btn.disabled = true;
       btn.textContent = 'Envoi en cours…';
-      setTimeout(function () {
-        btn.textContent = 'Message envoyé !';
-        btn.style.background = 'var(--cfi-purple)';
-        contactForm.reset();
+      
+      try {
+        // Envoyer les données à l'API
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            message: message
+          })
+        });
+        
+        const data = await response.json();
+        
+        if (response.ok && data.success) {
+          // Succès
+          btn.textContent = 'Message envoyé !';
+          btn.style.background = 'var(--cfi-purple)';
+          contactForm.reset();
+          
+          // Réinitialiser après 3 secondes
+          setTimeout(function () {
+            btn.textContent = originalText;
+            btn.disabled = false;
+            btn.style.background = '';
+          }, 3000);
+        } else {
+          // Erreur
+          throw new Error(data.error || 'Erreur lors de l\'envoi');
+        }
+      } catch (error) {
+        console.error('Erreur:', error);
+        btn.textContent = 'Erreur - Réessayer';
+        btn.style.background = '#dc2626';
+        btn.disabled = false;
+        
+        // Réinitialiser après 3 secondes
         setTimeout(function () {
           btn.textContent = originalText;
-          btn.disabled = false;
           btn.style.background = '';
-        }, 2500);
-      }, 800);
+        }, 3000);
+        
+        alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer ou nous contacter directement par téléphone.');
+      }
     });
   }
 })();

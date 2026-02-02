@@ -11,5 +11,8 @@
     "graphisme"
   ],
   "author": "CFI Services",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "resend": "^3.2.0"
+  }
 }
