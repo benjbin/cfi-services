@@ -2,6 +2,8 @@
 // Cette version utilise nodemailer avec Gmail SMTP
 // Plus simple à configurer si vous avez un compte Gmail
 
+import nodemailer from 'nodemailer';
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -19,7 +21,6 @@ export default async function handler(req, res) {
   }
 
   try {
-    const nodemailer = require('nodemailer');
 
     // Configuration du transporteur email
     // Vous devrez configurer ces variables dans Vercel :

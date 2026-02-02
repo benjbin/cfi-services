@@ -1,4 +1,6 @@
 // API Route Vercel pour envoyer l'email de contact
+import { Resend } from 'resend';
+
 export default async function handler(req, res) {
   // Vérifier que c'est une requête POST
   if (req.method !== 'POST') {
@@ -20,10 +22,7 @@ export default async function handler(req, res) {
 
   try {
     // Utiliser Resend pour envoyer l'email
-    // Vous devrez installer Resend : npm install resend
-    // Et configurer la clé API dans les variables d'environnement Vercel
-    const { Resend } = require('resend');
-    
+    // Configurez RESEND_API_KEY dans les variables d'environnement Vercel
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     const emailContent = `
