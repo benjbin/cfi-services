@@ -5,8 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "python -m http.server 8000",
-    "start": "python -m http.server 8000",
-    "build": "echo 'No build step required for static site'"
+    "start": "python -m http.server 8000"
   },
   "keywords": [
     "imprimeur",
