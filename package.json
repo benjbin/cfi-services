@@ -1,0 +1,18 @@
+{
+  "name": "cfi-services",
+  "version": "1.0.0",
+  "description": "Site web CFI Services - Imprimeur professionnel Belfort",
+  "private": true,
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "start": "python -m http.server 8000"
+  },
+  "keywords": [
+    "imprimeur",
+    "belfort",
+    "impression",
+    "graphisme"
+  ],
+  "author": "CFI Services",
+  "license": "UNLICENSED"
+}
