@@ -1,563 +1,637 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO Meta Tags -->
-  <title>CFI Services — Imprimeur professionnel Belfort | Impression tout support</title>
-  <meta name="description" content="CFI Services, imprimeur professionnel à Belfort. Impression tout support, conception graphique, textile, facility management. Qualité, réactivité et accompagnement personnalisé depuis plus de 15 ans. Devis gratuit.">
-  <meta name="keywords" content="imprimeur Belfort, impression professionnelle, impression tout support, conception graphique, textile Belfort, facility management, application mobile, imprimerie Belfort, CFI Services">
-  <meta name="author" content="CFI Services">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="fr">
-  <meta name="geo.region" content="FR-90">
-  <meta name="geo.placename" content="Belfort">
-  <meta name="geo.position" content="47.6376;6.8628">
-  <link rel="canonical" href="https://www.cfi-services.fr/">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.cfi-services.fr/">
-  <meta property="og:title" content="CFI Services — Imprimeur professionnel Belfort | Impression tout support">
-  <meta property="og:description" content="CFI Services, imprimeur professionnel à Belfort. Impression tout support, conception graphique, textile, facility management. Qualité, réactivité et accompagnement personnalisé.">
-  <meta property="og:image" content="https://www.cfi-services.fr/assets/logo.png">
-  <meta property="og:locale" content="fr_FR">
-  <meta property="og:site_name" content="CFI Services">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://www.cfi-services.fr/">
-  <meta name="twitter:title" content="CFI Services — Imprimeur professionnel Belfort">
-  <meta name="twitter:description" content="CFI Services, imprimeur professionnel à Belfort. Impression tout support, conception graphique, textile, facility management.">
-  <meta name="twitter:image" content="https://www.cfi-services.fr/assets/logo.png">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  
-  <!-- Preconnect -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CFI Services — Impression haut de gamme tout support</title>
+  <meta name="description" content="CFI Services, spécialiste de l'impression tout support et tout format : de la carte de visite au panneau 4×3, petites et grandes séries, offset, numérique, grand format, textile. Plus de 15 ans d'expertise.">
+  <meta name="theme-color" content="#f3f0ea">
+  <link rel="icon" href="assets/img/logo-cfi.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=7">
 </head>
-<body>
-  <div class="animated-shapes" aria-hidden="true">
-    <div class="shape shape-1"></div>
-    <div class="shape shape-2"></div>
-    <div class="shape shape-3"></div>
-    <div class="shape shape-4"></div>
-    <div class="shape shape-5"></div>
-  </div>
-  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
-  <header class="header" id="header">
-    <div class="header-inner container">
-      <a href="/" class="header-logo" aria-label="CFI services accueil">
-        <img src="assets/logo.png" alt="CFI services" width="140" height="48">
-      </a>
-      <nav class="header-nav" aria-label="Navigation principale">
-        <ul class="header-nav-list">
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#services">Nos services</a></li>
-          <li><a href="#labels">Nos labels</a></li>
-          <li class="header-nav-cta-wrap">
-            <a href="/contact" class="header-cta">Prendre contact</a>
-          </li>
-        </ul>
-      </nav>
-      <button type="button" class="header-burger" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span class="header-burger-line"></span>
-        <span class="header-burger-line"></span>
-        <span class="header-burger-line"></span>
-      </button>
+<body class="is-loading">
+
+  <!-- ============ LOADER : calage des 4 plaques CMJN ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-plates">
+      <span class="plate plate-c">CFI</span>
+      <span class="plate plate-m">CFI</span>
+      <span class="plate plate-y">CFI</span>
+      <span class="plate plate-k">CFI</span>
     </div>
-    <div class="header-backdrop" aria-hidden="true"></div>
+    <div class="loader-meta mono">
+      <span>Calage des couleurs</span>
+      <span class="loader-count">000</span>
+    </div>
+    <div class="loader-reg reg tl"></div><div class="loader-reg reg br"></div>
+  </div>
+
+  <!-- ============ CURSEUR : compte-fils ============ -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor-ring"></div>
+    <svg class="cursor-loupe" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="100" cy="100" r="88" fill="none" stroke="currentColor" stroke-width=".6" stroke-dasharray="1 5.9"/>
+      <path d="M100 4v14M100 182v14M4 100h14M182 100h14" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M92 100h16M100 92v16" stroke="currentColor" stroke-width=".8"/>
+    </svg>
+    <span class="cursor-label mono">×3,2</span>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a href="#top" class="nav-logo" aria-label="CFI Services, accueil">
+      <img src="assets/img/logo-cfi.svg" alt="" width="34" height="34">
+      <span>CFI<em>Services</em></span>
+    </a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#formats">Formats</a>
+      <a href="#supports">Supports</a>
+      <a href="#services">Services</a>
+      <a href="#atelier">Atelier</a>
+      <a href="#references">Références</a>
+    </nav>
+    <a href="#contact" class="nav-cta magnetic" data-quote><span>Demander un devis</span></a>
+    <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
   </header>
+  <div class="mobile-menu" aria-hidden="true">
+    <a href="#formats">Formats</a>
+    <a href="#supports">Supports</a>
+    <a href="#services">Services</a>
+    <a href="#atelier">Atelier</a>
+    <a href="#references">Références</a>
+    <a href="#contact" data-quote>Contact</a>
+  </div>
 
   <main>
-    <!-- Hero -->
-    <section class="hero" id="accueil">
-      <div class="hero-bg">
-        <div class="hero-shape hero-shape-1"></div>
-        <div class="hero-shape hero-shape-2"></div>
-        <div class="hero-mesh" aria-hidden="true"></div>
-        <div class="hero-noise"></div>
-      </div>
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <p class="hero-eyebrow reveal">Imprimeur & solutions graphiques</p>
-          <h1 class="hero-title">Votre spécialiste en impression <span class="hero-title-gradient">tout support</span></h1>
-          <p class="hero-tagline reveal">Chez CFI SERVICES, nous sommes votre spécialiste en impression tout support. Nous vous offrons des impressions sur mesure de qualité, réalisées avec une réactivité optimale. Notre engagement ? Vous proposer un accompagnement personnalisé et une gamme complète de prestations pour répondre à tous vos besoins en communication visuelle.</p>
-        </div>
-        <div class="hero-visual reveal">
-          <div class="hero-video-wrap">
-            <video class="hero-video" src="src/video/cfi_1.mp4" autoplay muted loop playsinline aria-label="CFI services - impression professionnelle" title="CFI Services - Impression tout support"></video>
+
+    <!-- ============ F.01 HERO : imprimante grand format en 3D temps réel ============ -->
+    <section class="hero dark" id="top">
+      <canvas id="hero3d" aria-hidden="true"></canvas>
+      <div class="hero-fallback" aria-hidden="true"></div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-grain" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <p class="kicker mono"><i class="pulse"></i>Tous supports · Tous formats · Toutes quantités</p>
+        <h1 class="hero-title" aria-label="On ne laisse pas une impression. On l'imprime.">
+          <span class="line"><span>On ne laisse pas</span></span>
+          <span class="line"><span>une impression.</span></span>
+          <span class="line line-serif"><span>On l’imprime.</span></span>
+        </h1>
+        <div class="hero-bottom">
+          <p class="hero-lede">De la carte de visite au panneau 4&nbsp;×&nbsp;3, sur papier, adhésif, bâche, textile ou support rigide, à l’unité comme en grande série.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-paper magnetic" href="#contact" data-quote><span>Demander un devis</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn-line magnetic" href="#formats"><span>Voir tous les formats</span></a>
           </div>
         </div>
       </div>
-      <a href="#savoir-faire" class="hero-scroll" aria-label="Découvrir la suite">
-        <span class="hero-scroll-label">Découvrir</span>
-        <div class="hero-scroll-line">
-          <span class="hero-scroll-arrow"></span>
-        </div>
-      </a>
+
+      <div class="hero-foot mono" aria-hidden="true">
+        <span class="rec"><i></i>En production · 1440 dpi · CMJN</span>
+        <span class="scroll-cue">Défiler pour entrer dans la machine<i></i></span>
+      </div>
+      <div class="hero-fade" aria-hidden="true"></div>
     </section>
 
-    <div class="section-divider section-divider--hero" aria-hidden="true">
-      <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0 120V60c240 0 480-60 720-60s480 60 720 60v60H0z" fill="var(--cfi-white)"/></svg>
-    </div>
+    <!-- ============ F.02 MANIFESTE ============ -->
+    <section class="manifesto dark sheet" id="savoir-faire">
+      <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+      <div class="slug mono"><span>F.02</span><span>Savoir-faire</span><i></i><span>Noir 100 %</span></div>
 
-    <!-- Un savoir-faire qui fait la différence -->
-    <section class="savoir-faire" id="savoir-faire">
-      <div class="savoir-faire-bg" aria-hidden="true"></div>
-      <div class="container">
-        <p class="section-eyebrow reveal">Notre ADN</p>
-        <h2 class="section-title section-title--savoir-faire reveal">Un savoir-faire qui fait la différence</h2>
-        <div class="savoir-faire-layout">
-          <div class="savoir-faire-intro-wrap reveal">
-            <p class="savoir-faire-intro">Chez CFI Services, nous mettons notre expertise au service de vos projets. Forts de plus de 15 ans d’expérience, nous allions créativité, précision et technologies modernes pour répondre à tous vos besoins en communication visuelle et impression.</p>
-          </div>
-          <div class="savoir-faire-stats">
-            <div class="savoir-faire-stat reveal" data-delay="0">
-              <span class="savoir-faire-stat-value">4,7<span class="savoir-faire-stat-unit">/5</span></span>
-              <span class="savoir-faire-stat-label">52 avis Google</span>
-            </div>
-            <div class="savoir-faire-stat reveal" data-delay="1">
-              <span class="savoir-faire-stat-value">100<span class="savoir-faire-stat-unit">%</span></span>
-              <span class="savoir-faire-stat-label">Taux de service</span>
-            </div>
-            <div class="savoir-faire-stat reveal" data-delay="2">
-              <span class="savoir-faire-stat-value">900<span class="savoir-faire-stat-unit">+</span></span>
-              <span class="savoir-faire-stat-label">Clients</span>
-            </div>
-            <div class="savoir-faire-stat reveal" data-delay="3">
-              <span class="savoir-faire-stat-value">15<span class="savoir-faire-stat-unit"> ans+</span></span>
-              <span class="savoir-faire-stat-label">Expériences</span>
-            </div>
-          </div>
+      <p class="manifesto-text js-words">
+        Un fichier n’est qu’une promesse. Chez CFI&nbsp;Services, nous la tenons&nbsp;: depuis plus de quinze ans, nous allions créativité, précision et technologies de pointe pour transformer vos visuels en objets que l’on touche, que l’on garde et dont on se souvient.
+      </p>
+
+      <div class="stats">
+        <div class="stat" data-reveal>
+          <span class="stat-num"><b data-count="15">0</b><sup>+</sup></span>
+          <span class="stat-label mono">Années d’expérience</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-num"><b data-count="900">0</b><sup>+</sup></span>
+          <span class="stat-label mono">Clients accompagnés</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-num"><b data-count="4.7" data-decimals="1">0</b><sup>/5</sup></span>
+          <span class="stat-label mono">52 avis Google</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-num"><b data-count="100">0</b><sup>%</sup></span>
+          <span class="stat-label mono">Taux de service</span>
         </div>
       </div>
     </section>
 
-    <div class="section-divider section-divider--light" aria-hidden="true">
-      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0 80V0l360 40L720 0l360 40 360-40v80H0z" fill="var(--cfi-grey-bg)"/></svg>
-    </div>
-
-    <!-- Nos services -->
-    <section class="services" id="services">
-      <div class="container">
-        <p class="section-eyebrow reveal">Ce que nous faisons</p>
-        <h2 class="section-title reveal">Nos services</h2>
-        <div class="services-list">
-          <article class="service-card reveal" data-delay="0">
-            <div class="service-card-media">
-              <div class="service-card-img-wrap">
-                <img src="src/img/cg.avif" alt="Conception graphique CFI Services - Création de visuels et identité visuelle" class="service-card-img" width="560" height="400" loading="lazy">
-              </div>
-            </div>
-            <div class="service-card-body">
-              <span class="service-card-num" aria-hidden="true">01</span>
-              <h3 class="service-card-title">Conception graphique</h3>
-              <p class="service-card-desc">Au sein de notre atelier, notre service de conception graphique vous <strong>accompagne à chaque étape</strong> de votre projet. De la <strong>vérification de vos fichiers</strong> avant impression à la <strong>création de visuels</strong>, en passant par la <strong>remise en forme</strong> selon votre maquette, nous vous garantissons un <strong>rendu optimal</strong>. Grâce à un <strong>interlocuteur unique</strong>, nous simplifions la gestion de votre communication imprimée, de A à Z. Faites confiance à notre expertise pour allier <strong>créativité, qualité et efficacité</strong>.</p>
-            </div>
-          </article>
-          <article class="service-card reveal" data-delay="1">
-            <div class="service-card-media">
-              <div class="service-card-img-wrap">
-                <img src="src/img/nm.avif" alt="Numérisation de documents CFI Services - Digitalisation professionnelle" class="service-card-img" width="560" height="400" loading="lazy">
-              </div>
-            </div>
-            <div class="service-card-body">
-              <span class="service-card-num" aria-hidden="true">02</span>
-              <h3 class="service-card-title">Numérisation</h3>
-              <p class="service-card-desc">CFI SERVICES, votre expert en <strong>dématérialisation</strong>. Depuis plus de 15 ans, nous accompagnons les entreprises dans leur <strong>transition digitale</strong> avec des <strong>solutions sur mesure</strong>. Spécialistes en <strong>numérisation, indexation et reconnaissance de caractères</strong>, nous optimisons la gestion de vos flux d’informations. Besoin d’urgence ? Nous proposons un <strong>traitement express</strong> pour tous types de documents, de la carte de visite au 36 pouces.</p>
-            </div>
-          </article>
-          <article class="service-card reveal" data-delay="2">
-            <div class="service-card-media">
-              <div class="service-card-img-wrap">
-                <img src="src/img/ip.avif" alt="Impression professionnelle CFI Services Belfort - Impression tout support" class="service-card-img" width="560" height="400" loading="lazy">
-              </div>
-            </div>
-            <div class="service-card-body">
-              <span class="service-card-num" aria-hidden="true">03</span>
-              <h3 class="service-card-title">Impression</h3>
-              <p class="service-card-desc">CFI SERVICES, nous maîtrisons <strong>toutes les techniques d’impression</strong> pour vos projets. L’<strong>impression offset</strong> est idéale pour les grandes séries, garantissant une qualité et un coût unitaire avantageux. Pour les plus petites quantités, les urgences ou la personnalisation, l’<strong>impression numérique</strong> offre souplesse et réactivité. Nous imprimons sur <strong>tous supports</strong>, de la carte de visite au panneau d’affichage, incluant papiers de création et matériaux techniques, pour tous les besoins. Notre <strong>parc machines intégré</strong> assure réactivité et contrôle qualité. Grâce à nos <strong>équipements de finition</strong>, nous sublimons votre communication visuelle avec rigueur et expertise.</p>
-            </div>
-          </article>
-          <article class="service-card reveal" data-delay="3">
-            <div class="service-card-media">
-              <div class="service-card-img-wrap">
-                <img src="src/img/mp.avif" alt="Mise sous plis CFI Services - Enveloppage et expédition de courriers" class="service-card-img" width="560" height="400" loading="lazy">
-              </div>
-            </div>
-            <div class="service-card-body">
-              <span class="service-card-num" aria-hidden="true">04</span>
-              <h3 class="service-card-title">Mise sous plis</h3>
-              <p class="service-card-desc">CFI SERVICES propose la mise sous pli <strong>multi-feuillet avec lecture</strong> pour un traitement <strong>rapide et sécurisé</strong> de vos courriers. Grâce à un système de <strong>lecture intelligent (OMR, Datamatrix…)</strong>, chaque pli est assemblé sans erreur et adressé au bon destinataire. Notre solution garantit <strong>confidentialité, fiabilité et gain de temps</strong> pour tous vos envois.</p>
-            </div>
-          </article>
-          <article class="service-card reveal" data-delay="4">
-            <div class="service-card-media">
-              <div class="service-card-img-wrap">
-                <img src="src/img/tt.avif" alt="Impression textile CFI Services - Flocage et sérigraphie sur textile" class="service-card-img" width="560" height="400" loading="lazy">
-              </div>
-            </div>
-            <div class="service-card-body">
-              <span class="service-card-num" aria-hidden="true">05</span>
-              <h3 class="service-card-title">Textile</h3>
-              <p class="service-card-desc">CFI SERVICES propose une impression textile de <strong>haute qualité</strong>, adaptée à tous types de supports : vêtements, accessoires, objets promotionnels. Grâce à des technologies comme la <strong>sublimation</strong> ou l’<strong>impression numérique directe</strong>, nous offrons un rendu <strong>durable, précis et éco-responsable</strong>.</p>
-            </div>
-          </article>
-          <article class="service-card reveal" data-delay="5">
-            <div class="service-card-media">
-              <div class="service-card-img-wrap">
-                <img src="src/img/fm.jpg" alt="Facility management CFI Services - Gestion de services aux entreprises" class="service-card-img" width="560" height="400" loading="lazy">
-              </div>
-            </div>
-            <div class="service-card-body">
-              <span class="service-card-num" aria-hidden="true">06</span>
-              <h3 class="service-card-title">Facility management</h3>
-              <p class="service-card-desc">CFI SERVICES propose une offre de facility management <strong>sur mesure</strong>, adaptée aux besoins des environnements <strong>tertiaires et industriels</strong>. Nous intervenons notamment dans l’<strong>optimisation</strong> de l’ensemble des impressions numériques ou offset. Notre approche intégrée vise à améliorer la <strong>performance des sites</strong> tout en maîtrisant les coûts. <strong>Fiabilité, réactivité et qualité de service</strong> sont au cœur de notre engagement.</p>
-            </div>
-          </article>
-          <article class="service-card reveal" data-delay="6">
-            <div class="service-card-media">
-              <div class="service-card-img-wrap">
-                <img src="src/img/am.avif" alt="Application mobile CFI Services - Développement d'applications iOS et Android" class="service-card-img" width="560" height="400" loading="lazy">
-              </div>
-            </div>
-            <div class="service-card-body">
-              <span class="service-card-num" aria-hidden="true">07</span>
-              <h3 class="service-card-title">Application mobile</h3>
-              <p class="service-card-desc">CFI SERVICES conçoit et développe des applications mobiles <strong>sur mesure</strong>, adaptées aux besoins métiers de ses clients. Nous assurons une <strong>expérience utilisateur fluide, ergonomique et performante</strong>, sur <strong>iOS comme Android</strong>. Nos solutions intègrent les dernières technologies pour optimiser vos processus et renforcer votre présence digitale. De la conception au déploiement, nous garantissons un <strong>accompagnement complet et agile</strong>.</p>
-            </div>
-          </article>
+    <!-- ============ MARQUEE ============ -->
+    <section class="marquee dark" aria-label="Nos métiers">
+      <div class="marquee-row" data-dir="1">
+        <div class="marquee-track">
+          <span>Impression offset</span><i>✦</i><span class="o">Numérique</span><i>✦</i><span>Grand format</span><i>✦</i><span class="o">Textile</span><i>✦</i><span>Finitions</span><i>✦</i><span class="o">Papiers de création</span><i>✦</i>
+        </div>
+      </div>
+      <div class="marquee-row" data-dir="-1">
+        <div class="marquee-track">
+          <span class="o">Conception graphique</span><i>✦</i><span>Mise sous plis</span><i>✦</i><span class="o">Numérisation</span><i>✦</i><span>Facility management</span><i>✦</i><span class="o">Application mobile</span><i>✦</i>
         </div>
       </div>
     </section>
 
-    <div class="section-divider section-divider--dark" aria-hidden="true">
-      <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0 60h1440V20c-240 0-480 40-720 40S240 20 0 20v40z" fill="#ffffff"/></svg>
-    </div>
+    <!-- ============ F.03 FORMATS : zoom du plus petit au plus grand ============ -->
+    <section class="formats dark" id="formats">
+      <div class="formats-pin">
+        <svg class="formats-svg" viewBox="0 -100 160 120" aria-hidden="true">
+          <defs>
+            <pattern id="grid10" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="#f3f0ea" stroke-width=".25"/></pattern>
+            <pattern id="grid100" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M100 0H0V100" fill="none" stroke="#f3f0ea" stroke-width="1.6"/></pattern>
+            <pattern id="grid1000" width="1000" height="1000" patternUnits="userSpaceOnUse"><path d="M1000 0H0V1000" fill="none" stroke="#f3f0ea" stroke-width="12"/></pattern>
+            <linearGradient id="fGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a6a22"/><stop offset=".35" stop-color="#f8e7a8"/><stop offset=".5" stop-color="#c9a24a"/><stop offset=".8" stop-color="#f8e7a8"/><stop offset="1" stop-color="#8a6a22"/></linearGradient>
+            <linearGradient id="fBig" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6c4092"/><stop offset=".55" stop-color="#b0127f"/><stop offset="1" stop-color="#e5007d"/></linearGradient>
+          </defs>
+          <rect class="fgrid" data-cell="10" x="-40000" y="-40000" width="80000" height="80000" fill="url(#grid10)"/>
+          <rect class="fgrid" data-cell="100" x="-40000" y="-40000" width="80000" height="80000" fill="url(#grid100)"/>
+          <rect class="fgrid" data-cell="1000" x="-40000" y="-40000" width="80000" height="80000" fill="url(#grid1000)"/>
+          <line class="fline" x1="-40000" y1="0" x2="40000" y2="0"/>
 
-    <!-- Nos références clients -->
-    <section class="references" id="references">
-      <div class="container">
-        <p class="section-eyebrow section-eyebrow-light reveal">Ils nous font confiance</p>
-        <h2 class="section-title section-title-light reveal">Nos références clients</h2>
-        <div class="references-marquee">
-          <div class="references-fade references-fade--left" aria-hidden="true"></div>
-          <div class="references-fade references-fade--right" aria-hidden="true"></div>
-          <div class="references-track">
-            <div class="ref-item"><span>Client 1</span></div>
-            <div class="ref-item"><span>Client 2</span></div>
-            <div class="ref-item"><span>Client 3</span></div>
-            <div class="ref-item"><span>Client 4</span></div>
-            <div class="ref-item"><span>Client 5</span></div>
-            <div class="ref-item"><span>Client 6</span></div>
-            <div class="ref-item"><span>Client 1</span></div>
-            <div class="ref-item"><span>Client 2</span></div>
-            <div class="ref-item"><span>Client 3</span></div>
-            <div class="ref-item"><span>Client 4</span></div>
-            <div class="ref-item"><span>Client 5</span></div>
-            <div class="ref-item"><span>Client 6</span></div>
+          <!-- Panneau 4 × 3 m -->
+          <rect class="fmt" x="0" y="-3000" width="4000" height="3000" fill="url(#fBig)"/>
+          <text x="1650" y="-2330" class="ft-big" font-size="430" fill="#f3f0ea">Voir</text>
+          <text x="1650" y="-1880" class="ft-big" font-size="430" fill="#f3f0ea">grand.</text>
+          <text x="3900" y="-120" class="ft-mono" font-size="110" fill="#f3f0ea" text-anchor="end">4 × 3 m</text>
+
+          <!-- A0 -->
+          <rect class="fmt" x="0" y="-1189" width="841" height="1189" fill="#ffe100"/>
+          <text x="50" y="-880" class="ft-big" font-size="330" fill="#0d0c0e">A0</text>
+          <text x="815" y="-30" class="ft-mono" font-size="34" fill="#0d0c0e" text-anchor="end">841 × 1189 mm</text>
+
+          <!-- A3 -->
+          <rect class="fmt" x="0" y="-420" width="297" height="420" fill="#00a0dc"/>
+          <text x="18" y="-305" class="ft-big" font-size="118" fill="#f3f0ea">A3</text>
+          <text x="287" y="-11" class="ft-mono" font-size="12" fill="#f3f0ea" text-anchor="end">297 × 420 mm</text>
+
+          <!-- A5 -->
+          <rect class="fmt" x="0" y="-210" width="148" height="210" fill="#e5007d"/>
+          <text x="9" y="-150" class="ft-big" font-size="60" fill="#f3f0ea">A5</text>
+          <text x="142" y="-6" class="ft-mono" font-size="6" fill="#f3f0ea" text-anchor="end">148 × 210 mm</text>
+
+          <!-- Carte de visite -->
+          <rect class="fmt" x="0" y="-55" width="85" height="55" fill="#141215"/>
+          <text x="6" y="-25" class="ft-big" font-size="23" fill="url(#fGold)">CFI</text>
+          <text x="6.5" y="-17" class="ft-mono" font-size="3" fill="#c9a24a" letter-spacing="1.2">SERVICES</text>
+          <text x="80" y="-4" class="ft-mono" font-size="2.6" fill="#f3f0ea" opacity=".6" text-anchor="end">85 × 55 mm</text>
+
+          <!-- Échelle humaine -->
+          <g class="fperson">
+            <circle cx="1240" cy="-1640" r="110"/>
+            <path d="M1060-1470Q1240-1525 1420-1470L1452-900 1392-900 1372 0 1262 0 1240-700 1218 0 1108 0 1088-900 1028-900Z"/>
+            <text x="1400" y="-1690" class="ft-mono" font-size="110">1,75 m</text>
+          </g>
+        </svg>
+
+        <div class="formats-hud">
+          <div class="formats-top">
+            <div class="slug mono"><span>F.03</span><span>Toutes les tailles</span><i></i><span class="formats-step"><b>01</b> / 05</span></div>
+            <h2 class="h-display formats-title">Du plus petit<br>au plus <em>grand.</em></h2>
+          </div>
+          <div class="formats-bottom">
+            <div class="formats-current" aria-live="polite">
+              <span class="mono fc-kind">Carte de visite</span>
+              <span class="fc-size">85 × 55 <small>mm</small></span>
+              <p class="fc-desc">Papiers de création, dorure, gaufrage, vernis sélectif.</p>
+            </div>
+            <ol class="formats-ticks mono">
+              <li class="is-on">Carte</li><li>A5</li><li>A3</li><li>A0</li><li>4 × 3</li>
+            </ol>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="section-divider section-divider--references" aria-hidden="true">
-      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0 0h1440v60c-240-20-480-20-720 0S240 80 0 60V0z" fill="#ffffff"/></svg>
-    </div>
-
-    <!-- Offrir l'excellence en impression — flagship -->
-    <section class="excellence" id="excellence">
-      <div class="excellence-bg">
-        <div class="excellence-gradient"></div>
-        <div class="excellence-pattern" aria-hidden="true"></div>
-        <div class="excellence-paper" aria-hidden="true"></div>
+    <!-- ============ F.04 SUPPORTS ============ -->
+    <section class="supports sheet" id="supports">
+      <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+      <div class="slug mono"><span>F.04</span><span>Tous les supports</span><i></i><span>Petites &amp; grandes séries</span></div>
+      <div class="supports-head">
+        <h2 class="h-display" data-reveal>Chaque matière.<br><em>Un seul interlocuteur.</em></h2>
+        <p data-reveal>Papier, carton, adhésif, bâche, rigide, textile&nbsp;: nos équipes maîtrisent chaque support et chaque technique. Vous nous confiez le projet, nous trouvons la matière, le format et le procédé les plus justes.</p>
       </div>
-      <div class="container excellence-inner">
-        <header class="excellence-header">
-          <p class="section-eyebrow reveal">Notre engagement</p>
-          <h2 class="excellence-title reveal">Offrir l'excellence en impression</h2>
-        </header>
-        <div class="excellence-grid">
-          <article class="excellence-card reveal" data-delay="0">
-            <span class="excellence-card-num" aria-hidden="true">01</span>
-            <h3 class="excellence-card-title">Créativité & Personnalisation</h3>
-            <p class="excellence-card-text">CFI Services transforme les concepts en réalisations uniques grâce à des technologies d'impression numérique avancées et des solutions digitales innovantes. Chaque projet est traité avec un souci du détail et une personnalisation totale.</p>
-          </article>
-          <article class="excellence-card reveal" data-delay="1">
-            <span class="excellence-card-num" aria-hidden="true">02</span>
-            <h3 class="excellence-card-title">Qualité & Expertise</h3>
-            <p class="excellence-card-text">Grâce à des équipements de pointe et une équipe d'experts, CFI Services garantit des impressions haute définition et des supports résistants, adaptés aux exigences de chaque secteur.</p>
-          </article>
-          <article class="excellence-card reveal" data-delay="2">
-            <span class="excellence-card-num" aria-hidden="true">03</span>
-            <h3 class="excellence-card-title">Innovation & Engagement</h3>
-            <p class="excellence-card-text">L'entreprise évolue vers des solutions connectées et interactives, intégrant le numérique et le print pour proposer une communication visuelle impactante et adaptée aux nouveaux usages (QR codes, impression interactive, signalétique dynamique, etc.)</p>
-          </article>
+
+      <div class="matlab">
+        <figure class="specimen" data-reveal>
+          <svg class="specimen-svg" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <text id="mEmbSrc" x="300" y="372" text-anchor="middle" class="m-emb">CFI</text>
+              <filter id="mFx" filterUnits="userSpaceOnUse" primitiveUnits="userSpaceOnUse" x="0" y="0" width="600" height="600" color-interpolation-filters="sRGB">
+                <feImage href="#mEmbSrc" x="0" y="0" width="600" height="600" result="txt"/>
+                <feGaussianBlur in="txt" stdDeviation="3.5" result="emb"/>
+                <feTurbulence class="m-noise" type="fractalNoise" baseFrequency=".012 .45" numOctaves="3" seed="7" result="noise"/>
+                <feComposite class="m-height" in="noise" in2="emb" operator="arithmetic" k1="0" k2="1" k3=".9" k4="0" result="height"/>
+                <feDiffuseLighting class="m-diffuse" in="height" surfaceScale="3" diffuseConstant="1.5" lighting-color="#fff" result="light"><fePointLight class="m-pl" x="300" y="180" z="270"/></feDiffuseLighting>
+                <feComposite in="SourceGraphic" in2="light" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" result="lit"/>
+                <feSpecularLighting class="m-spec" in="height" surfaceScale="3" specularConstant=".9" specularExponent="24" lighting-color="#fff" result="spec"><fePointLight class="m-pl" x="300" y="180" z="270"/></feSpecularLighting>
+                <feComposite class="m-specmix" in="spec" in2="lit" operator="arithmetic" k1="0" k2=".3" k3="1" k4="0"/>
+              </filter>
+            </defs>
+            <g class="m-base" filter="url(#mFx)"></g>
+          </svg>
+          <div class="specimen-deco"></div>
+          <figcaption class="specimen-cap mono"><span class="sc-num">Échantillon 01 / 08</span><span class="sc-hint">Bougez la souris : la lumière rasante révèle la matière</span></figcaption>
+        </figure>
+
+        <div class="matside">
+          <div class="matinfo" aria-live="polite">
+            <span class="mono mi-sub">Vergé · texturé · teinté dans la masse</span>
+            <h3 class="mi-name">Papier de création</h3>
+            <p class="mi-text">La matière qui se remarque avant même d’être lue.</p>
+            <p class="mi-uses mono"><b>Idéal pour</b><span>Cartes de visite · Faire-part · Papeterie</span></p>
+          </div>
+          <div class="fan" role="tablist" aria-label="Choisir une matière"></div>
         </div>
-        <div class="excellence-cta-wrap">
-          <a href="/contact" class="btn btn-outline reveal">Devis & contact</a>
+      </div>
+
+      <div class="qty" data-reveal>
+        <div class="qty-left">
+          <span class="mono qty-label">Combien d’exemplaires&nbsp;?</span>
+          <output class="qty-out">1 <small>exemplaire</small></output>
+        </div>
+        <div class="qty-right">
+          <input type="range" class="qty-range" min="0" max="100" value="0" step="1" aria-label="Nombre d’exemplaires">
+          <div class="qty-scale mono" aria-hidden="true"><span>1</span><span>10</span><span>100</span><span>1 000</span><span>10 000</span><span>100 000</span></div>
+          <div class="qty-result">
+            <span class="qty-tech">Impression numérique</span>
+            <p class="qty-text">Réactivité, urgences et personnalisation&nbsp;: nous imprimons même à l’unité.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Nos labels -->
-    <section class="labels" id="labels">
-      <div class="container">
-        <p class="section-eyebrow reveal">Reconnaissances</p>
-        <h2 class="section-title reveal">Nos labels</h2>
-        <div class="labels-grid">
-          <div class="label-card reveal" data-delay="0">
-            <img src="src/img/label_1.png" alt="Certification qualité CFI Services - Label qualité impression" loading="lazy">
+    <!-- ============ F.05 SERVICES (scroll horizontal) ============ -->
+    <section class="services dark" id="services">
+      <div class="services-pin">
+        <div class="services-head">
+          <div class="slug mono"><span>F.05</span><span>Services</span><i></i><span class="services-count"><b>01</b> / 07</span></div>
+          <div class="services-progress"><i></i></div>
+        </div>
+        <div class="services-track">
+
+          <article class="service-intro">
+            <h2 class="h-display">Tout ce qui<br>s’imprime.<br><em>Et bien plus.</em></h2>
+            <p>Un interlocuteur unique, un parc machines intégré, des artisans du détail. De la carte de visite au panneau d’affichage, du courrier sécurisé à l’application mobile.</p>
+            <span class="mono drag-hint">Faites défiler <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </article>
+
+          <article class="service" style="--ch: var(--c)">
+            <div class="service-text">
+              <span class="service-num">01</span>
+              <h3>Impression</h3>
+              <p class="service-lead">Offset pour les grandes séries. Numérique pour l’urgence et la personnalisation.</p>
+              <p>Nous imprimons sur tous supports, de la carte de visite au panneau d’affichage, papiers de création et matériaux techniques compris. Notre parc machines intégré et nos équipements de finition garantissent réactivité et contrôle qualité à chaque feuille.</p>
+              <ul class="tags mono"><li>Offset</li><li>Numérique</li><li>Grand format</li><li>Papiers de création</li><li>Finitions</li></ul>
+            </div>
+            <figure class="service-media"><img src="assets/img/grand-format.jpg" alt="Impression grand format couleur en sortie de machine" loading="lazy"></figure>
+          </article>
+
+          <article class="service" style="--ch: var(--m)">
+            <div class="service-text">
+              <span class="service-num">02</span>
+              <h3>Conception graphique</h3>
+              <p class="service-lead">De l’idée au BAT, un seul interlocuteur.</p>
+              <p>Vérification de vos fichiers avant impression, création de visuels, remise en forme selon votre maquette&nbsp;: notre studio intégré vous accompagne à chaque étape pour un rendu irréprochable, de A à Z.</p>
+              <ul class="tags mono"><li>Contrôle prépresse</li><li>Création</li><li>Mise en page</li><li>BAT</li></ul>
+            </div>
+            <figure class="service-media"><img src="assets/img/conception.jpg" alt="Graphiste travaillant sur une palette de couleurs" loading="lazy"></figure>
+          </article>
+
+          <article class="service" style="--ch: var(--y)">
+            <div class="service-text">
+              <span class="service-num">03</span>
+              <h3>Textile</h3>
+              <p class="service-lead">Vos couleurs, portées.</p>
+              <p>Vêtements, accessoires, objets promotionnels&nbsp;: sublimation et impression numérique directe pour un rendu durable, précis et éco-responsable.</p>
+              <ul class="tags mono"><li>Sublimation</li><li>Impression directe</li><li>Objets promotionnels</li></ul>
+            </div>
+            <figure class="service-media"><img src="assets/img/textile.jpg" alt="Presse à chaud pour impression textile" loading="lazy"></figure>
+          </article>
+
+          <article class="service" style="--ch: var(--violet)">
+            <div class="service-text">
+              <span class="service-num">04</span>
+              <h3>Mise sous plis</h3>
+              <p class="service-lead">Chaque pli au bon destinataire. Sans exception.</p>
+              <p>Mise sous pli multi-feuillets avec système de lecture intelligent (OMR, Datamatrix…)&nbsp;: chaque pli est assemblé sans erreur, en toute confidentialité.</p>
+              <ul class="tags mono"><li>OMR</li><li>Datamatrix</li><li>Confidentialité</li><li>Multi-feuillets</li></ul>
+            </div>
+            <figure class="service-media"><img src="assets/img/mise-sous-plis.jpg" alt="Machine de mise sous plis" loading="lazy"></figure>
+          </article>
+
+          <article class="service" style="--ch: var(--c)">
+            <div class="service-text">
+              <span class="service-num">05</span>
+              <h3>Numérisation</h3>
+              <p class="service-lead">Du papier au flux numérique, en express.</p>
+              <p>Numérisation, indexation et reconnaissance de caractères pour fluidifier vos flux d’information. Traitement express pour tous documents, de la carte de visite au plan 36&nbsp;pouces.</p>
+              <ul class="tags mono"><li>Dématérialisation</li><li>Indexation</li><li>OCR</li><li>Jusqu’au 36″</li></ul>
+            </div>
+            <figure class="service-media"><img src="assets/img/numerisation.jpg" alt="Transformation numérique de documents" loading="lazy"></figure>
+          </article>
+
+          <article class="service" style="--ch: var(--m)">
+            <div class="service-text">
+              <span class="service-num">06</span>
+              <h3>Facility management</h3>
+              <p class="service-lead">Votre production d’impression, optimisée sur site.</p>
+              <p>Une offre sur mesure pour les environnements tertiaires et industriels&nbsp;: optimisation de l’ensemble de vos impressions numériques et offset, performance accrue, coûts maîtrisés.</p>
+              <ul class="tags mono"><li>Tertiaire</li><li>Industrie</li><li>Maîtrise des coûts</li></ul>
+            </div>
+            <figure class="service-media"><img src="assets/img/facility.jpg" alt="Illustration facility management" loading="lazy"></figure>
+          </article>
+
+          <article class="service" style="--ch: var(--y)">
+            <div class="service-text">
+              <span class="service-num">07</span>
+              <h3>Application mobile</h3>
+              <p class="service-lead">Quand le print rencontre le digital.</p>
+              <p>Applications iOS et Android sur mesure, conçues pour vos métiers&nbsp;: une expérience fluide et performante, de la conception au déploiement.</p>
+              <ul class="tags mono"><li>iOS</li><li>Android</li><li>Sur mesure</li></ul>
+            </div>
+            <figure class="service-media"><img src="assets/img/app-mobile.jpg" alt="Interface d'application mobile" loading="lazy"></figure>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ F.06 ATELIER DES FINITIONS : récit au scroll ============ -->
+    <section class="atelier dark" id="atelier">
+      <div class="atelier-pin">
+        <div class="atelier-bgword" aria-hidden="true">Toucher</div>
+        <div class="atelier-inner">
+          <div class="atelier-copy">
+            <div class="slug mono"><span>F.06</span><span>L’atelier des finitions</span><i></i><span class="at-count"><b>00</b> / 04</span></div>
+            <h2 class="h-display at-title">La différence<br>se <em>touche</em>.</h2>
+            <ol class="at-steps">
+              <li class="at-step"><span class="mono">01 — Dorure à chaud</span><p>Un film métallisé, pressé à chaud, dépose l’or exactement là où il faut. Pas une couleur&nbsp;: une lumière.</p></li>
+              <li class="at-step"><span class="mono">02 — Gaufrage</span><p>Une matrice et sa contrepartie frappent la feuille. Le logo sort du papier, on le sent du bout des doigts.</p></li>
+              <li class="at-step"><span class="mono">03 — Vernis sélectif 3D</span><p>Un vernis épais, posé zone par zone. Brillant sur mat, en relief&nbsp;: c’est la lumière qui dessine le motif.</p></li>
+              <li class="at-step"><span class="mono">04 — Tranche colorée</span><p>Deux cartes contrecollées, des bords teintés. Le détail qu’on remarque en dernier, et qu’on n’oublie plus.</p></li>
+            </ol>
+            <a class="btn btn-paper magnetic at-cta" href="#contact" data-quote><span>Imaginer la vôtre</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
-          <div class="label-card reveal" data-delay="1">
-            <img src="src/img/label_2.png" alt="Reconnaissance professionnelle CFI Services - Label excellence" loading="lazy">
+
+          <div class="atelier-stage">
+            <div class="card-zone">
+              <div class="card-tilt">
+                <div class="card-press">
+                  <div class="biz-card" data-stock="noir">
+                    <div class="face front">
+                      <div class="card-grain"></div>
+                      <div class="card-uv"></div>
+                      <span class="card-mark">CFI</span>
+                      <span class="card-mark card-mark-foil" aria-hidden="true">CFI</span>
+                      <span class="card-sub mono">Services</span>
+                      <span class="card-line mono">Impression tout support</span>
+                      <span class="card-rosette"></span>
+                      <div class="card-glare"></div>
+                      <div class="foil-film"></div>
+                      <div class="uv-sweep"></div>
+                    </div>
+                    <div class="face back"><div class="card-grain"></div></div>
+                    <span class="edge e-top"></span><span class="edge e-bottom"></span><span class="edge e-left"></span><span class="edge e-right"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-shadow" aria-hidden="true"></div>
+            </div>
+            <div class="at-progress" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Retour d'expérience de nos clients -->
-    <section class="temoignages" id="temoignages">
-      <div class="container">
-        <p class="section-eyebrow reveal">Témoignages</p>
-        <h2 class="section-title reveal">Retour d'expérience de nos clients</h2>
-        <div class="temoignages-wrap">
-          <div class="temoignages-slider" id="temoignages-slider">
-            <article class="temoignage-card" data-index="0">
-              <span class="temoignage-quote-mark" aria-hidden="true">"</span>
-              <blockquote class="temoignage-quote">Un partenaire réactif et professionnel. Les livraisons sont toujours dans les temps et la qualité au rendez-vous.</blockquote>
-              <footer class="temoignage-author">
-                <span class="temoignage-name">Nom du client</span>
-                <span class="temoignage-role">Fonction, Entreprise</span>
-              </footer>
-            </article>
-            <article class="temoignage-card" data-index="1">
-              <span class="temoignage-quote-mark" aria-hidden="true">"</span>
-              <blockquote class="temoignage-quote">CFI a su comprendre nos besoins et nous accompagner sur l’ensemble de notre chaîne graphique et d’impression.</blockquote>
-              <footer class="temoignage-author">
-                <span class="temoignage-name">Nom du client</span>
-                <span class="temoignage-role">Fonction, Entreprise</span>
-              </footer>
-            </article>
-            <article class="temoignage-card" data-index="2">
-              <span class="temoignage-quote-mark" aria-hidden="true">"</span>
-              <blockquote class="temoignage-quote">Excellente collaboration. Équipe à l’écoute et solutions adaptées à nos contraintes.</blockquote>
-              <footer class="temoignage-author">
-                <span class="temoignage-name">Nom du client</span>
-                <span class="temoignage-role">Fonction, Entreprise</span>
-              </footer>
-            </article>
-          </div>
-          <div class="temoignages-nav">
-            <button type="button" class="temoignage-prev" aria-label="Témoignage précédent">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            </button>
-            <div class="temoignage-dots" id="temoignage-dots"></div>
-            <button type="button" class="temoignage-next" aria-label="Témoignage suivant">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </div>
+    <!-- ============ F.07 PROCESS ============ -->
+    <section class="process sheet" id="process">
+      <div class="slug mono"><span>F.07</span><span>Méthode</span><i></i><span>Du fichier à la feuille</span></div>
+      <div class="process-grid">
+        <div class="process-head">
+          <h2 class="h-display" data-reveal>Du fichier<br>à la <em>feuille</em>.</h2>
+          <div class="process-meter"><i></i></div>
         </div>
+        <ol class="process-steps">
+          <li class="step" data-reveal>
+            <span class="step-num mono">01 — Brief</span>
+            <h3>On écoute, on conseille.</h3>
+            <p>Le bon support, le bon papier, la bonne technique. Nous traduisons votre intention en choix d’impression justes.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step-num mono">02 — Prépresse &amp; BAT</span>
+            <h3>Rien ne part sans votre accord.</h3>
+            <p>Contrôle des fichiers, gestion des couleurs, épreuve. Notre studio vérifie chaque détail avant le premier tirage.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step-num mono">03 — Calage &amp; tirage</span>
+            <h3>Chaque couleur à sa place.</h3>
+            <p>Offset ou numérique, chaque tirage est calé, mesuré et contrôlé sur notre parc machines intégré.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step-num mono">04 — Finition &amp; livraison</span>
+            <h3>Prêt à marquer les esprits.</h3>
+            <p>Façonnage, finitions, conditionnement. Livré dans les délais, avec la réactivité qui fait notre réputation.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ F.08 ENGAGEMENTS ============ -->
+    <section class="pillars sheet">
+      <div class="slug mono"><span>F.08</span><span>Engagements</span><i></i><span>Offrir l’excellence en impression</span></div>
+      <div class="pillars-grid">
+        <article class="pillar" style="--ch: var(--c)" data-reveal>
+          <span class="pillar-chip mono">C</span>
+          <h3>Créativité &amp; personnalisation</h3>
+          <p>Des concepts transformés en réalisations uniques, grâce à l’impression numérique avancée et à des solutions digitales innovantes.</p>
+        </article>
+        <article class="pillar" style="--ch: var(--m)" data-reveal>
+          <span class="pillar-chip mono">M</span>
+          <h3>Qualité &amp; expertise</h3>
+          <p>Équipements de pointe et équipe d’experts&nbsp;: impressions haute définition et supports résistants, adaptés aux exigences de chaque secteur.</p>
+        </article>
+        <article class="pillar" style="--ch: var(--y)" data-reveal>
+          <span class="pillar-chip mono">J</span>
+          <h3>Innovation &amp; engagement</h3>
+          <p>Print et numérique réunis&nbsp;: QR codes, impression interactive, signalétique dynamique. Une communication visuelle pensée pour les nouveaux usages.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ F.09 REFERENCES ============ -->
+    <section class="refs sheet" id="references">
+      <div class="slug mono"><span>F.09</span><span>Références</span><i></i><span>Ils nous confient leur image</span></div>
+      <h2 class="h-display refs-title" data-reveal>Ils nous confient<br><em>leur image.</em></h2>
+      <ul class="logos">
+        <li data-reveal><img src="assets/clients/alstom.png" alt="Alstom" loading="lazy"></li>
+        <li data-reveal><img src="assets/clients/ge.png" alt="General Electric" loading="lazy"></li>
+        <li data-reveal><img src="assets/clients/credit-agricole.png" alt="Crédit Agricole" loading="lazy"></li>
+        <li data-reveal><img src="assets/clients/eurockeennes.png" alt="Les Eurockéennes de Belfort" loading="lazy"></li>
+        <li data-reveal><img src="assets/clients/territoire-habitat.svg" alt="Territoire Habitat" loading="lazy"></li>
+        <li data-reveal><img src="assets/clients/vitrines-belfort.png" alt="Les Vitrines de Belfort" loading="lazy"></li>
+      </ul>
+      <div class="labels">
+        <div class="label" data-reveal>
+          <img src="assets/labels/imprimvert.png" alt="Label Imprim'Vert" loading="lazy">
+          <div><b>Imprim’Vert</b><span class="mono">Gestion responsable des déchets et des encres</span></div>
+        </div>
+        <div class="label" data-reveal>
+          <img src="assets/labels/ecovadis.png" alt="Médaille EcoVadis Silver" loading="lazy">
+          <div><b>EcoVadis Silver — Top 15 %</b><span class="mono">Notation RSE · janvier 2024</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ F.10 AVIS ============ -->
+    <section class="reviews dark sheet">
+      <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+      <div class="slug mono"><span>F.10</span><span>Avis clients</span><i></i><span>4,7 / 5 · 52 avis Google</span></div>
+      <div class="reviews-head">
+        <h2 class="h-display" data-reveal>Ce qu’ils<br><em>en retiennent.</em></h2>
+        <div class="rating" data-reveal>
+          <span class="rating-num">4,7</span>
+          <span class="stars" aria-label="4,7 étoiles sur 5"><i style="--fill:94%"></i></span>
+          <span class="mono">52 avis Google</span>
+        </div>
+      </div>
+      <div class="reviews-rail" tabindex="0" aria-label="Avis clients, faire défiler horizontalement">
+        <figure class="review"><blockquote>Une conscience professionnelle au top, du travail et des conseils de grande qualité&nbsp;!</blockquote><figcaption><b>Florentin Munsch</b><span class="mono">Avis Google ★★★★★</span></figcaption></figure>
+        <figure class="review"><blockquote>Très pro, bonne qualité, prix très intéressant, délai très rapide et un super accueil. Que demander de plus&nbsp;!</blockquote><figcaption><b>Aurore Galliot</b><span class="mono">Avis Google ★★★★★</span></figcaption></figure>
+        <figure class="review"><blockquote>Un travail de qualité, et irréprochable&nbsp;! Efficacité, talent. Beaucoup de mots pour dire merci pour toute l’équipe&nbsp;!</blockquote><figcaption><b>Guillaume Meny</b><span class="mono">Avis Google ★★★★★</span></figcaption></figure>
+        <figure class="review"><blockquote>Super réactivité et merci pour votre professionnalisme. Deux agents ont pris le temps de m’aider pour la finalisation de mon mémoire.</blockquote><figcaption><b>David Laissue</b><span class="mono">Avis Google ★★★★★</span></figcaption></figure>
+        <figure class="review"><blockquote>Équipe très réactive pour l’offre de prix et la production. Les prix étaient corrects et la réalisation de qualité. Un grand merci.</blockquote><figcaption><b>Amandine Girard</b><span class="mono">Avis Google ★★★★★</span></figcaption></figure>
+        <figure class="review"><blockquote>Un personnel très accueillant qui se met en quatre pour satisfaire votre demande, même pour un particulier. Travail très soigné, je recommande vivement.</blockquote><figcaption><b>Patrick Mourolin</b><span class="mono">Avis Google ★★★★★</span></figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ============ F.11 CONTACT ============ -->
+    <section class="contact sheet" id="contact">
+      <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+      <div class="slug mono"><span>F.11</span><span>Contact</span><i></i><span>Bon à tirer</span></div>
+      <div class="contact-grid">
+        <div class="contact-copy">
+          <h2 class="h-display contact-title" data-reveal>Parlons de<br>votre prochain<br><em>tirage.</em></h2>
+          <p data-reveal>Un projet, une urgence, une idée encore floue&nbsp;? Décrivez-le en quelques lignes&nbsp;: nous revenons vers vous rapidement avec un conseil et un devis.</p>
+          <ul class="contact-direct" data-reveal>
+            <li><span class="mono">E-mail</span><a href="mailto:gladys.lemoine@cfi-services.fr">gladys.lemoine@cfi-services.fr</a></li>
+            <li><span class="mono">LinkedIn</span><a href="https://fr.linkedin.com/company/cfi-services-reprographie" target="_blank" rel="noopener">CFI Services Reprographie ↗</a></li>
+          </ul>
+        </div>
+
+        <form class="quote" novalidate data-reveal>
+          <fieldset class="quote-types">
+            <legend class="mono">Votre projet</legend>
+            <label><input type="checkbox" name="type" value="Impression"><span>Impression</span></label>
+            <label><input type="checkbox" name="type" value="Grand format"><span>Grand format</span></label>
+            <label><input type="checkbox" name="type" value="Conception graphique"><span>Conception</span></label>
+            <label><input type="checkbox" name="type" value="Textile"><span>Textile</span></label>
+            <label><input type="checkbox" name="type" value="Mise sous plis"><span>Mise sous plis</span></label>
+            <label><input type="checkbox" name="type" value="Numérisation"><span>Numérisation</span></label>
+            <label><input type="checkbox" name="type" value="Autre"><span>Autre</span></label>
+          </fieldset>
+          <div class="field-row">
+            <label class="field"><input name="name" required placeholder=" " autocomplete="name"><span>Nom</span></label>
+            <label class="field"><input name="company" placeholder=" " autocomplete="organization"><span>Société</span></label>
+          </div>
+          <div class="field-row">
+            <label class="field"><input name="email" type="email" required placeholder=" " autocomplete="email"><span>E-mail</span></label>
+            <label class="field"><input name="phone" type="tel" placeholder=" " autocomplete="tel"><span>Téléphone</span></label>
+          </div>
+          <label class="field"><textarea name="message" rows="4" required placeholder=" "></textarea><span>Quantités, formats, délais, finitions…</span></label>
+          <div class="quote-foot">
+            <button class="btn btn-ink magnetic" type="submit"><span>Envoyer la demande</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <p class="quote-status mono" role="status"></p>
+          </div>
+        </form>
       </div>
     </section>
 
   </main>
 
-  <footer class="footer">
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer dark">
     <div class="footer-top">
-      <div class="container footer-inner">
-        <div class="footer-brand">
-          <a href="/" class="footer-logo" aria-label="CFI services">
-            <img src="assets/logo.png" alt="CFI services" width="140" height="48">
-          </a>
-          <p class="footer-tagline">Imprimeur & solutions graphiques. Qualité, délais et conseil au service de vos projets.</p>
-        </div>
-        <nav class="footer-nav" aria-label="Navigation pied de page">
-          <p class="footer-nav-title">Navigation</p>
-          <ul>
-            <li><a href="/">Accueil</a></li>
-            <li><a href="/#services">Nos services</a></li>
-            <li><a href="/#labels">Nos labels</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="footer-contact">
-          <p class="footer-nav-title">Contact</p>
-          <address class="footer-address">
-            26 Rue Edouard Branly,<br>
-            90000 Belfort, France
-          </address>
-          <p class="footer-tel">
-            <a href="tel:+33384901575">03 84 90 15 75</a>
-          </p>
-          <p class="footer-email">
-            <a href="mailto:gladys.lemoine@cfi-services.fr">gladys.lemoine@cfi-services.fr</a>
-          </p>
-        </div>
-        <div class="footer-map-block">
-          <p class="footer-nav-title">Plan</p>
-          <div class="footer-map-wrap">
-            <iframe
-              src="https://www.google.com/maps?q=26+Rue+Edouard+Branly,+90000+Belfort,+France&output=embed"
-              width="100%"
-              height="100%"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="CFI Services - 26 Rue Edouard Branly, Belfort">
-            </iframe>
-          </div>
-          <a href="https://www.google.com/maps/search/?api=1&query=26+Rue+Edouard+Branly,+90000+Belfort,+France" class="footer-map-link" target="_blank" rel="noopener noreferrer">Ouvrir dans Google Maps</a>
-        </div>
-      </div>
+      <p class="footer-claim">Imprimons quelque chose<br><em>d’inoubliable.</em></p>
+      <a class="btn btn-paper magnetic" href="#contact" data-quote><span>Demander un devis</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p class="footer-legal">© CFI services. Tous droits réservés. <a href="mentions-legales.html">Mentions légales</a></p>
-      </div>
+    <div class="footer-mark" aria-hidden="true">CFI SERVICES</div>
+    <div class="footer-bottom mono">
+      <div class="colorbar"></div>
+      <span>© <span class="year">2026</span> CFI Services — Impression tout support</span>
+      <a href="#">Mentions légales</a>
+      <a href="https://fr.linkedin.com/company/cfi-services-reprographie" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
   </footer>
 
-  <script src="script.js"></script>
-  
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "CFI Services",
-    "image": "https://www.cfi-services.fr/assets/logo.png",
-    "@id": "https://www.cfi-services.fr",
-    "url": "https://www.cfi-services.fr",
-    "telephone": "+33384901575",
-    "priceRange": "€€",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "26 Rue Edouard Branly",
-      "addressLocality": "Belfort",
-      "postalCode": "90000",
-      "addressRegion": "Bourgogne-Franche-Comté",
-      "addressCountry": "FR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 47.6376,
-      "longitude": 6.8628
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "08:00",
-      "closes": "18:00"
-    },
-    "sameAs": [],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.7",
-      "reviewCount": "52"
-    }
-  }
-  </script>
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "CFI Services",
-    "url": "https://www.cfi-services.fr",
-    "logo": "https://www.cfi-services.fr/assets/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+33384901575",
-      "contactType": "customer service",
-      "email": "gladys.lemoine@cfi-services.fr",
-      "areaServed": "FR",
-      "availableLanguage": "fr"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "26 Rue Edouard Branly",
-      "addressLocality": "Belfort",
-      "postalCode": "90000",
-      "addressRegion": "Bourgogne-Franche-Comté",
-      "addressCountry": "FR"
-    },
-    "foundingDate": "2010",
-    "numberOfEmployees": {
-      "@type": "QuantitativeValue",
-      "value": "10-50"
-    }
-  }
-  </script>
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Impression professionnelle",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "CFI Services"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "France"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Services d'impression",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Conception graphique"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Impression tout support"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Impression textile"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Facility management"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Application mobile"
-          }
-        }
-      ]
-    }
-  }
-  </script>
+  <!-- ============ POPUP : demande de devis ============ -->
+  <div class="qmodal" id="quote-modal" role="dialog" aria-modal="true" aria-labelledby="qm-title" aria-hidden="true">
+    <div class="qm-backdrop" data-close></div>
+    <div class="qm-panel" tabindex="-1">
+      <button class="qm-close" type="button" aria-label="Fermer" data-close><span></span><span></span></button>
+
+      <aside class="qm-side">
+        <span class="crop tl"></span><span class="crop bl"></span>
+        <p class="mono qm-kicker"><i class="pulse"></i>Réponse rapide · Devis gratuit</p>
+        <h2 class="qm-title" id="qm-title">Parlons de<br>votre projet<em>.</em></h2>
+        <p class="qm-lede">Un format, une quantité, une urgence ou une simple idée&nbsp;: dites-nous l’essentiel, on revient vers vous avec un conseil et un devis.</p>
+        <ul class="qm-direct">
+          <li><span class="mono">E-mail</span><a href="mailto:gladys.lemoine@cfi-services.fr">gladys.lemoine@cfi-services.fr</a></li>
+          <li><span class="mono">LinkedIn</span><a href="https://fr.linkedin.com/company/cfi-services-reprographie" target="_blank" rel="noopener">CFI Services Reprographie ↗</a></li>
+        </ul>
+        <div class="colorbar qm-colorbar" aria-hidden="true"></div>
+      </aside>
+
+      <div class="qm-main">
+        <form class="quote quote-modal" novalidate>
+          <fieldset class="quote-types">
+            <legend class="mono">Votre projet</legend>
+            <label><input type="checkbox" name="type" value="Impression"><span>Impression</span></label>
+            <label><input type="checkbox" name="type" value="Grand format"><span>Grand format</span></label>
+            <label><input type="checkbox" name="type" value="Finitions"><span>Finitions</span></label>
+            <label><input type="checkbox" name="type" value="Conception graphique"><span>Conception</span></label>
+            <label><input type="checkbox" name="type" value="Textile"><span>Textile</span></label>
+            <label><input type="checkbox" name="type" value="Mise sous plis"><span>Mise sous plis</span></label>
+            <label><input type="checkbox" name="type" value="Numérisation"><span>Numérisation</span></label>
+            <label><input type="checkbox" name="type" value="Autre"><span>Autre</span></label>
+          </fieldset>
+          <div class="field-row">
+            <label class="field"><input name="name" required placeholder=" " autocomplete="name"><span>Nom</span></label>
+            <label class="field"><input name="company" placeholder=" " autocomplete="organization"><span>Société</span></label>
+          </div>
+          <div class="field-row">
+            <label class="field"><input name="email" type="email" required placeholder=" " autocomplete="email"><span>E-mail</span></label>
+            <label class="field"><input name="phone" type="tel" placeholder=" " autocomplete="tel"><span>Téléphone</span></label>
+          </div>
+          <label class="field"><textarea name="message" rows="3" required placeholder=" "></textarea><span>Quantités, formats, délais, finitions…</span></label>
+          <div class="quote-foot">
+            <button class="btn btn-ink" type="submit"><span>Envoyer la demande</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <p class="quote-status mono" role="status"></p>
+          </div>
+        </form>
+        <div class="qm-done" hidden>
+          <span class="qm-check" aria-hidden="true"></span>
+          <h3>Bon à tirer&nbsp;!</h3>
+          <p>Votre messagerie s’ouvre avec la demande pré-remplie&nbsp;: il ne reste qu’à l’envoyer. On revient vers vous très vite.</p>
+          <button class="btn btn-line" type="button" data-close><span>Fermer</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=4"></script>
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }</script>
+  <script type="module" src="js/hero3d.js?v=8"></script>
 </body>
 </html>
