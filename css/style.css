@@ -846,8 +846,8 @@ body.qm-lock { overflow: hidden; }
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   animation: grain 1s steps(6) infinite; }
 @keyframes grain { 0% { transform: translate(0, 0); } 20% { transform: translate(-3%, 2%); } 40% { transform: translate(2%, -3%); } 60% { transform: translate(-2%, -1%); } 80% { transform: translate(3%, 3%); } 100% { transform: translate(0, 0); } }
-.hero-inner { width: auto; max-width: 820px; justify-content: flex-end; padding: 120px var(--gutter) 110px; }
-.hero-title { color: var(--paper); font-size: clamp(3rem, 7.2vw, 8.6rem); mix-blend-mode: normal; text-shadow: 0 2px 40px rgba(0,0,0,.35); }
+.hero-inner { width: auto; max-width: min(64vw, 1040px); justify-content: flex-end; padding: 120px var(--gutter) 110px; }
+.hero-title { color: var(--paper); font-size: clamp(3rem, 6.4vw, 8rem); mix-blend-mode: normal; text-shadow: 0 2px 40px rgba(0,0,0,.35); }
 .hero-title .line-serif { color: var(--y); }
 .hero-bottom { flex-direction: column; align-items: flex-start; gap: 26px; margin-top: 34px; }
 .hero-lede { max-width: 460px; padding: 0; margin: 0; background: none; backdrop-filter: none; -webkit-backdrop-filter: none; color: rgba(243,240,234,.82); }
@@ -860,8 +860,8 @@ body.qm-lock { overflow: hidden; }
 .rec i { width: 8px; height: 8px; border-radius: 50%; background: #ff3b3b; box-shadow: 0 0 10px #ff3b3b; animation: blink .8s infinite alternate; }
 .hero-fade { z-index: 3; }
 @media (max-width: 900px) {
-  .hero-inner { padding: 0 var(--gutter) 96px; }
-  .hero-title { font-size: clamp(2.4rem, 10.6vw, 4.6rem); }
+  .hero-inner { padding: 0 var(--gutter) 96px; max-width: none; }
+  .hero-title { font-size: clamp(2.3rem, 10.4vw, 4.6rem); }
   .hero-scrim { background: linear-gradient(0deg, rgba(11,10,13,.92) 0%, rgba(11,10,13,.55) 45%, rgba(11,10,13,0) 75%); }
   .hero-foot .rec { display: none; }
   .hero .kicker { display: none; }
