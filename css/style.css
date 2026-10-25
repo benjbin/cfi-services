@@ -762,7 +762,6 @@ em { font-family: var(--f-serif); font-style: italic; font-weight: 400; letter-s
 
 @media (max-width: 900px) {
   .matlab { grid-template-columns: 1fr; }
-  .matside { flex-direction: column-reverse; }
   .fan { height: 250px; margin: -6px 0 0; }
   .blade { width: 46px; margin-left: -23px; }
   .blade { transform: rotate(calc(var(--open) * (var(--i) - (var(--n) - 1) / 2) * 11.5deg)) translateY(var(--lift)); }
@@ -869,4 +868,36 @@ body.qm-lock { overflow: hidden; }
 @media (max-width: 560px) {
   .hero-ctas .btn-line { display: none; }
   .scroll-cue { font-size: 9px; }
+}
+
+/* ---------- F.04 Supports : structure simplifiée ---------- */
+.supports-head { grid-template-columns: minmax(0, 1fr) minmax(0, 340px); gap: 48px; align-items: end; margin-bottom: clamp(36px, 4vw, 56px); }
+.supports-head .h-display { font-size: clamp(2.4rem, 4.6vw, 4.8rem); max-width: 14ch; }
+.supports-head p { font-size: 16px; max-width: 340px; }
+.matlab {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 64px); align-items: stretch;
+  padding: clamp(16px, 2vw, 24px); border-radius: 12px; background: #fff;
+  box-shadow: 0 1px 0 rgba(13,12,14,.04), 0 40px 80px -50px rgba(13,12,14,.35);
+}
+.specimen { border-radius: 8px; box-shadow: none; align-self: start; width: 100%; }
+.specimen-cap { left: 14px; right: auto; bottom: 14px; }
+.matside { justify-content: space-between; gap: 32px; padding: clamp(8px, 1.6vw, 24px) clamp(4px, 1vw, 12px) 0 0; }
+.mi-count { display: block; font-size: 12px; margin-bottom: 18px; color: var(--ink); opacity: .45; }
+.mi-count b { font-weight: 500; opacity: 1; color: var(--m); }
+.mi-sub { margin-bottom: 8px; }
+.mi-name { font-size: clamp(2rem, 3.4vw, 3.4rem); }
+.mi-text { font-size: 17px; margin: 14px 0 16px; }
+.fan-wrap { border-top: 1px solid rgba(13,12,14,.1); padding-top: 18px; }
+.fan-label { margin: 0 0 6px; opacity: .55; }
+.fan { height: clamp(220px, 20vw, 300px); margin-top: 0; }
+.qty { margin-top: clamp(40px, 5vw, 64px); }
+@media (max-width: 900px) {
+  .supports-head { grid-template-columns: 1fr; gap: 16px; }
+  .matlab { grid-template-columns: 1fr; padding: 12px; }
+  .matside { flex-direction: column; padding: 4px 6px 0; gap: 22px; }
+  .fan { height: 240px; }
+}
+@media (max-width: 560px) {
+  .slug > span:last-child { display: none; }
+  .slug span { white-space: nowrap; }
 }

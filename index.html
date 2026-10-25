@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=13">
 </head>
 <body class="is-loading">
 
@@ -216,8 +216,8 @@
       <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
       <div class="slug mono"><span>F.04</span><span>Tous les supports</span><i></i><span>Petites &amp; grandes séries</span></div>
       <div class="supports-head">
-        <h2 class="h-display" data-reveal>Chaque matière.<br><em>Un seul interlocuteur.</em></h2>
-        <p data-reveal>Papier, carton, adhésif, bâche, rigide, textile&nbsp;: nos équipes maîtrisent chaque support et chaque technique. Vous nous confiez le projet, nous trouvons la matière, le format et le procédé les plus justes.</p>
+        <h2 class="h-display" data-reveal>Chaque matière. <em>Un seul interlocuteur.</em></h2>
+        <p data-reveal>Papier, carton, adhésif, bâche, rigide, textile&nbsp;: vous nous confiez le projet, nous trouvons la bonne matière.</p>
       </div>
 
       <div class="matlab">
@@ -239,17 +239,21 @@
             <g class="m-base" filter="url(#mFx)"></g>
           </svg>
           <div class="specimen-deco"></div>
-          <figcaption class="specimen-cap mono"><span class="sc-num">Échantillon 01 / 08</span><span class="sc-hint">Bougez la souris : la lumière rasante révèle la matière</span></figcaption>
+          <figcaption class="specimen-cap mono"><span class="sc-hint">Bougez la souris pour éclairer la matière</span></figcaption>
         </figure>
 
         <div class="matside">
           <div class="matinfo" aria-live="polite">
+            <span class="mono mi-count"><b>01</b> / 08</span>
             <span class="mono mi-sub">Vergé · texturé · teinté dans la masse</span>
             <h3 class="mi-name">Papier de création</h3>
             <p class="mi-text">La matière qui se remarque avant même d’être lue.</p>
             <p class="mi-uses mono"><b>Idéal pour</b><span>Cartes de visite · Faire-part · Papeterie</span></p>
           </div>
-          <div class="fan" role="tablist" aria-label="Choisir une matière"></div>
+          <div class="fan-wrap">
+            <p class="mono fan-label">Choisissez une matière <span aria-hidden="true">↓</span></p>
+            <div class="fan" role="tablist" aria-label="Choisir une matière"></div>
+          </div>
         </div>
       </div>
 
@@ -630,7 +634,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="js/main.js?v=4"></script>
+  <script src="js/main.js?v=5"></script>
   <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }</script>
   <script type="module" src="js/hero3d.js?v=12"></script>
 </body>

@@ -373,7 +373,7 @@
     const noises = $$('.m-noise', specimen), heights = $$('.m-height', specimen);
     const diffuse = $('.m-diffuse', specimen), spec = $('.m-spec', specimen), specMix = $('.m-specmix', specimen);
     const lights = $$('.m-pl', specimen);
-    const info = { sub: $('.mi-sub'), name: $('.mi-name'), text: $('.mi-text'), uses: $('.mi-uses span'), num: $('.sc-num') };
+    const info = { sub: $('.mi-sub'), name: $('.mi-name'), text: $('.mi-text'), uses: $('.mi-uses span'), num: $('.mi-count b') };
     let current = -1;
 
     function select(i, animate = true) {
@@ -388,7 +388,7 @@
       spec.setAttribute('surfaceScale', m.scale);
       specMix.setAttribute('k2', m.spec * 0.45);
       info.sub.textContent = m.sub; info.name.textContent = m.name; info.text.textContent = m.text; info.uses.textContent = m.uses;
-      info.num.textContent = `Échantillon ${String(i + 1).padStart(2, '0')} / ${String(MATS.length).padStart(2, '0')}`;
+      info.num.textContent = String(i + 1).padStart(2, '0');
       blades.forEach((b, j) => { b.classList.toggle('is-active', j === i); b.setAttribute('aria-selected', String(j === i)); });
       if (animate && !reduced) {
         gsap.fromTo(specimen, { clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0 0 0% 0)', duration: 0.9, ease: 'expo.inOut', overwrite: true });
