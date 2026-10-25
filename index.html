@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=15">
+  <link rel="stylesheet" href="css/style.css?v=17">
 </head>
 <body class="is-loading">
 
@@ -53,6 +53,7 @@
       <a href="#services">Services</a>
       <a href="#atelier">Atelier</a>
       <a href="#references">Références</a>
+      <a href="#engagements">RSE</a>
     </nav>
     <a href="#contact" class="nav-cta magnetic" data-quote><span>Demander un devis</span></a>
     <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
@@ -63,6 +64,7 @@
     <a href="#services">Services</a>
     <a href="#atelier">Atelier</a>
     <a href="#references">Références</a>
+    <a href="#engagements">Engagements RSE</a>
     <a href="#contact" data-quote>Contact</a>
   </div>
 
@@ -88,6 +90,10 @@
             <a class="btn btn-paper magnetic" href="#contact" data-quote><span>Demander un devis</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a class="btn btn-line magnetic" href="#formats"><span>Voir tous les formats</span></a>
           </div>
+          <a class="hero-certs" href="#engagements" aria-label="Nos certifications">
+            <span class="hc"><img src="assets/labels/ecovadis.png" alt="" width="36" height="36"><span><b>EcoVadis Silver</b><small class="mono">Top 15 % · RSE</small></span></span>
+            <span class="hc"><img src="assets/labels/imprimvert.png" alt="" width="36" height="36"><span><b>Imprim’Vert</b><small class="mono">Label environnemental</small></span></span>
+          </a>
         </div>
       </div>
 
@@ -517,15 +523,29 @@
         </li>
       </ul>
 
-      <div class="certs" data-reveal>
-        <p class="certs-title"><span class="mono">Engagés &amp; certifiés</span>Une impression exigeante, et responsable.</p>
-        <div class="cert">
-          <img src="assets/labels/imprimvert.png" alt="Label Imprim'Vert" loading="lazy">
-          <div><b>Imprim’Vert</b><span class="mono">Gestion responsable des déchets et des encres</span></div>
+      <div class="certs" id="engagements">
+        <div class="certs-intro" data-reveal>
+          <p class="mono certs-kicker"><i></i>Engagements RSE</p>
+          <h3 class="certs-title">Certifiés pour répondre <em>à vos exigences.</em></h3>
+          <p class="certs-text">Vos achats responsables comptent. Notre démarche environnementale et sociale est évaluée par des organismes indépendants&nbsp;: vous pouvez intégrer CFI Services à votre chaîne fournisseurs en toute confiance.</p>
         </div>
-        <div class="cert">
-          <img src="assets/labels/ecovadis.png" alt="Médaille EcoVadis Silver" loading="lazy">
-          <div><b>EcoVadis Silver · Top 15 %</b><span class="mono">Notation RSE · janvier 2024</span></div>
+        <div class="cert cert-ecovadis" data-reveal>
+          <div class="cert-visual"><img src="assets/labels/ecovadis.png" alt="Médaille EcoVadis Silver, Top 15 %, janvier 2024" loading="lazy"></div>
+          <div class="cert-body">
+            <span class="mono cert-tag">Notation RSE · EcoVadis</span>
+            <p class="cert-big">Top <b>15&nbsp;%</b></p>
+            <p class="cert-name">Médaille <strong>Silver</strong></p>
+            <p class="cert-desc">Parmi les entreprises les mieux notées par EcoVadis sur l’environnement, le social, l’éthique et les achats responsables.</p>
+            <span class="mono cert-date">Évaluation · janvier 2024</span>
+          </div>
+        </div>
+        <div class="cert cert-imprimvert" data-reveal>
+          <div class="cert-visual"><img src="assets/labels/imprimvert.png" alt="Label Imprim'Vert" loading="lazy"></div>
+          <div class="cert-body">
+            <span class="mono cert-tag">Label environnemental</span>
+            <p class="cert-big cert-big-sm">Imprim’Vert</p>
+            <p class="cert-desc">Le label des imprimeurs engagés&nbsp;: gestion responsable des déchets dangereux, sécurisation des stockages et suppression des produits toxiques.</p>
+          </div>
         </div>
       </div>
     </section>
